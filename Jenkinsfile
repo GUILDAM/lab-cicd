@@ -8,8 +8,10 @@ pipeline {
             }
             steps {
                sh 'mvn -B -DskipTests clean package'
-			   archiveArtifacts 'target/*.jar'
+	        archiveArtifacts 'target/*.jar'
+		sh './jenkins_build.sh'
+		junit '*/build/test-results/*.xml'
+		step( [ $class: 'JacocoPublisher' ] )
             }
         }
-    }
 }
