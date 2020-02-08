@@ -16,7 +16,7 @@ pipeline {
 		success {
 			githubNotify status: "SUCCESS", 
 						 credentialsId: "github", 
-						 account: "prof-eduardo-galego", 
+						 account: "guildam", 
 						 repo: "lab-cicd",
 						 description: "Sucesso"
 						 
@@ -24,7 +24,7 @@ pipeline {
         failure {
             githubNotify status: "FAILURE", 
 						 credentialsId: "github", 
-						 account: "prof-eduardo-galego", 
+						 account: "guildam", 
 						 repo: "lab-cicd",
 						 description: "Erro"
         }
