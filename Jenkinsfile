@@ -9,7 +9,7 @@ pipeline {
             steps {
                sh 'mvn -B -DskipTests clean package'
 	        archiveArtifacts 'target/*.jar'
-            }
+            },
 	stage('UnitTest') {
 		     steps {
 			sh './jenkins_build.sh'
