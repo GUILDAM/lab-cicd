@@ -1,7 +1,6 @@
 pipeline {
     agent {
                 docker { image 'maven:3-alpine' }
-                docker { image 'ictu/jacoco-agent-docker'}
         }
     stages {
         stage('Build') {
